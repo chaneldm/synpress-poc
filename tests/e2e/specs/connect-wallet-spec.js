@@ -6,6 +6,7 @@ const home = new HomePage();
 describe('Wallet tests', () => {
   before(() => {
     home.visit();
+    home.loginToAccount();
     home.acceptTermsAndConditions();
   });
   context('Connect metamask wallet', () => {

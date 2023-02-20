@@ -2,6 +2,7 @@ import Page from '../page';
 import Header from './header';
 import Terms from './terms';
 import Onboard from './onboard';
+import Login from './login';
 
 export default class HomePage extends Page {
   constructor() {
@@ -9,12 +10,18 @@ export default class HomePage extends Page {
     this.header = new Header();
     this.terms = new Terms();
     this.onboard = new Onboard();
+    this.login = new Login();
   }
 
   visit() {
     cy.visit('/');
   }
 
+  loginToAccount() {
+    this.login.login();
+  }
+
+  //terms modal
   acceptTermsAndConditions() {
     const termsModal = this.terms.getTermsModal();
     termsModal.scrollTo('bottom');
