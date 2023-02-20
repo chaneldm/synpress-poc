@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "test:e2e": "NETWORK_NAME=mainnet synpress run --config baseUrl=https://staking.synthetix.io",
-    "test:e2e:local": "SECRET_WORDS='test test test test test test test test test test test junk' NETWORK_NAME=mainnet synpress run --config baseUrl=https://staking.synthetix.io"
+    "test:e2e:local": "SECRET_WORDS='test test test test test test test test test test test junk' NETWORK_NAME=mainnet synpress run --config baseUrl=https://staking.synthetix.io",
+    "test:e2e:gu": "SECRET_WORDS='test test test test test test test test test test test junk' NETWORK_NAME=mainnet synpress run --config baseUrl=https://master-dev.website.godsunchained.com/"
   },
   "devDependencies": {
     "@synthetixio/synpress": "3.1.0"
